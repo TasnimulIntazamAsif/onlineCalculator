@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 28px;
+    text-align: right;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.operator {
+    background: #ffd700;
+    color: #333;
+}
+
+.operator:hover {
+    background: #ffed4a;
+}
+
+.equals {
+    background: #4CAF50;
+    color: white;
+}
+
+.equals:hover {
+    background: #45a049;
+}
+
+.clear {
+    background: #ff4757;
+    color: white;
+    grid-column: span 4;
+}
+
+.clear:hover {
+    background: #ff6b81;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        padding: 20px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    #display {
+        height: 60px;
+        font-size: 24px;
+    }
+} 
